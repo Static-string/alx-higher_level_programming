@@ -7,3 +7,6 @@ New class Square
 class Square:
     """ Empty class """
     pass
+
+
+square = Square()
