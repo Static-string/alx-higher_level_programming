@@ -16,8 +16,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-
-
     @property
     def width(self):
         """ method that returns the value of the width
@@ -25,8 +23,6 @@ class Rectangle:
             rectangle width
         """
         return self.__width
-
-
 
     @width.setter
     def width(self, value):
@@ -43,8 +39,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-
-
     @property
     def height(self):
         """ method that returns the value of the height
@@ -52,8 +46,6 @@ class Rectangle:
             rectangle height
         """
         return self.__height
-
-
 
     @height.setter
     def height(self, value):
@@ -70,15 +62,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
-
     def area(self):
         """ Method that calculates the Rectangle area
         Returns:
             rectangle area
         """
         return self.width * self.height
-
 
     def perimeter(self):
         """ Method that calculates the Rectangle perimeter
@@ -88,8 +77,6 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return (2 * self.width) + (2 * self.height)
-
-
 
     def __str__(self):
         """ Method that returns the Rectangle #
@@ -102,8 +89,6 @@ class Rectangle:
         for i in range(self.height):
             rectangle += ("#" * self.width) + "\n"
         return rectangle[:-1]
-
-
 
     def __repr__(self):
         """ Method that returns the string represantion of the instance

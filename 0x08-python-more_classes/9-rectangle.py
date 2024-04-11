@@ -6,7 +6,6 @@ This module provides a Rectangle class.
 """
 
 
-
 class Rectangle:
 
     """A Rectangle class with attributes width and height,
@@ -19,20 +18,14 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
-
-
     @property
     def width(self):
         return self.__width
-
-
 
     @width.setter
     def width(self, value):
@@ -42,13 +35,9 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-
-
     @property
     def height(self):
         return self.__height
-
-
 
     @height.setter
     def height(self, value):
@@ -58,9 +47,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
-
-    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -71,17 +57,12 @@ class Rectangle:
         else:
             return rect_2
 
-
-
     @classmethod
     def square(cls, size=0):
         return Rectangle(size, size)
 
-
-
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
 
     def __str__(self):
         total = ""
@@ -95,18 +76,12 @@ class Rectangle:
                 total += "\n"
         return total
 
-
-
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
-
-
     def area(self):
         return self.__width * self.__height
-
-
 
     def perimeter(self):
         if self.__width is 0 or self.__height is 0:
